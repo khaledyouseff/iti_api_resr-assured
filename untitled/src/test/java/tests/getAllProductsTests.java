@@ -25,7 +25,7 @@ public class getAllProductsTests {
       Assert.assertTrue(responseBody.contains("id"));
     }
     @Test
-    public void ValidateSpecificField() {
+    public void ValidateSpecificFields() {
         given().
                 when().
                 get("https://dummyjson.com/products").
@@ -35,9 +35,6 @@ public class getAllProductsTests {
                 body("products[0].description", equalTo("An apple mobile which is nothing like apple")).
                 and().body("total", equalTo(100)).and().
                 body("limit", equalTo(30));
-
-        ;
-
 
     }
     @Test
@@ -54,5 +51,14 @@ public class getAllProductsTests {
         given().when().get("https://dummyjson.com/products").then().
                 assertThat().
                 contentType(ContentType.JSON);
+    }
+    @Test
+    public void requestDetails() {
+        given().
+                log().all().
+                when().
+                get("https://dummyjson.com/products").
+                then().
+                log().body();
     }
 }
