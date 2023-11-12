@@ -43,7 +43,7 @@ public class DeleteProduct {
         Response response = RestAssured
                 .when()
                 .delete("https://dummyjson.com/products/1");
-                response.then().statusCode(200);
+                response.then().statusCode(201);
     }
     @Test
     public void validateResponseIsJson() {
