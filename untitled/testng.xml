@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="E:/valeu prepration/iti studying/testing/automation/codes/iti_api_resr-assured/untitled/allure-results">
+
+        <classes>
+            <class name="validationTestes.AddProduct"/>
+            <class name="validationTestes.DeleteProduct"/>
+            <class name="validationTestes.loginAndGetTests"/>
+            <class name="validationTestes.UpdateDataTest"/>
+            <class name="validationTestes.getAllProductsTests"/>
+            <class name="validationTestes.getSingleProduct"/>
+            <class name="validationTestes.searchProduct"/>
+        </classes>
+    </test>
+</suite>
